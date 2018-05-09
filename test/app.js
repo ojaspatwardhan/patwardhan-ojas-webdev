@@ -29,7 +29,7 @@ module.exports = function(app)
     // Edited Code
 
     var connectionString = 'mongodb://127.0.0.1:27017/test'; // for local
-    if(process.env.MLAB_USERNAME_WEBDEV) { // check if running remotely
+    if(1 < 2) { // check if running remotely
     	var username = admin //process.env.MLAB_USERNAME_WEBDEV; // get from environment
     	var password = admin //process.env.MLAB_PASSWORD_WEBDEV;
     	connectionString = 'mongodb://' + username + ':' + password;
