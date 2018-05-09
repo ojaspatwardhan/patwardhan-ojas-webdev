@@ -37,6 +37,8 @@ require('./utilities/filelist');
 
 app.use(app.express.static(__dirname + '/public'));
 
+require("./test/app.js");
+
 var blog = require('./lectures/graduate/blog/app');
 blog(app);
 
@@ -70,5 +72,6 @@ var application = {
     }
 };
 require('./lectures/graduate/wam')(application);
+
 
 app.listen(process.env.PORT || 3000);

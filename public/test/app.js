@@ -18,6 +18,44 @@
         }
         init();
 
+        // Edited Code
+
+        // function createMessage(message) {
+        //     vm.message = "";
+        //     var obj = {
+        //         message: message
+        //     };
+        //     $http.post("../test/", obj)
+        //         .then(
+        //             findAllMessages,
+        //             function(err) {
+        //                 vm.error = err;
+        //             }
+        //         );
+        // }
+        //
+        // function deleteMessage(message) {
+        //     $http.delete("../test/" + message._id)
+        //         .then(
+        //             findAllMessages,
+        //             function(err) {
+        //                 vm.error = err;
+        //             }
+        //         );
+        // }
+        //
+        // function findAllMessages() {
+        //     $http.get("../test/")
+        //         .then(
+        //             function(response) {
+        //                 vm.messages = response.data;
+        //             },
+        //             function(err) {
+        //                 vm.error = err;
+        //             }
+        //         );
+        // }
+
         function createMessage(message) {
             vm.message = "";
             var obj = {
