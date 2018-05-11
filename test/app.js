@@ -17,9 +17,9 @@
     //
     //   }
     // });
-    // app.get("/api/test", findAllMessages);
-    // app.post("/api/test", createMessage);
-    // app.delete("/api/test/:id", deleteMessage);
+    app.get("/api/test", findAllMessages);
+    app.post("/api/test", createMessage);
+    app.delete("/api/test/:id", deleteMessage);
 
     // Edited Code
 
