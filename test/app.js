@@ -1,8 +1,8 @@
-// module.exports = function(app)
-// {
+module.exports = function(app)
+{
     //Custom Code starts
 
-    var mongodb = require('mongodb');
+    // var mongodb = require('mongodb');
     // var MongoClient = mongodb.MongoClient;
     //
     // var url = 'mongodb://admin:admin@ds119820.mlab.com:19820/heroku_hskk3b79';
@@ -17,9 +17,9 @@
     //
     //   }
     // });
-    // app.get("/api/test", findAllMessages);
-    // app.post("/api/test", createMessage);
-    // app.delete("/api/test/:id", deleteMessage);
+    app.get("/api/test", findAllMessages);
+    app.post("/api/test", createMessage);
+    app.delete("/api/test/:id", deleteMessage);
 
     // Edited Code
 
@@ -55,7 +55,7 @@
 
     console.log("Connection string is");
     console.log(connectionString);
-    process.exit();
+
     var mongoose = require("mongoose");
     mongoose.connect(connectionString);
 
@@ -103,4 +103,4 @@
                 }
             );
     }
-// };
+};
