@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Web Dev at Northeastern University",
   "main": "server.js",
+  "engines": {
+    "node": "8.10.0"
+  },
   "dependencies": {
     "angular": "^1.6.10",
     "bcrypt-nodejs": "0.0.3",
