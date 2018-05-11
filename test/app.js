@@ -1,5 +1,5 @@
-module.exports = function(app)
-{
+// module.exports = function(app)
+// {
     //Custom Code starts
 
     // var mongodb = require('mongodb');
@@ -46,18 +46,20 @@ module.exports = function(app)
     // Edited Code
 
     var connectionString = 'mongodb://127.0.0.1:27017/test'; // for local
-    if(process.env.MLAB_USERNAME_WEBDEV) { // check if running remotely
-    	var username =  process.env.MLAB_USERNAME_WEBDEV; // get from environment
-    	var password = process.env.MLAB_PASSWORD_WEBDEV;
-    	connectionString = 'mongodb://' + username + ':' + password;
-    	connectionString += '@ds119820.mlab.com:19820/heroku_hskk3b79'; // user yours
-    }
+    // if(process.env.MLAB_USERNAME_WEBDEV) { // check if running remotely
+    // 	var username =  process.env.MLAB_USERNAME_WEBDEV; // get from environment
+    // 	var password = process.env.MLAB_PASSWORD_WEBDEV;
+    // 	connectionString = 'mongodb://' + username + ':' + password;
+    // 	connectionString += '@ds119820.mlab.com:19820/heroku_hskk3b79'; // user yours
+    // }
 
     console.log("Connection string is");
     console.log(connectionString);
 
     var mongoose = require("mongoose");
-    mongoose.connect(process.env.MONGO_URI);
+    mongoose.connect(process.env.MONGO_URI || connectionString);
+
+    console.log("Connection Successful");
 
     var TestSchema = mongoose.Schema({
         message: String
@@ -103,4 +105,4 @@ module.exports = function(app)
                 }
             );
     }
-};
+// };
