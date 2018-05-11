@@ -20,48 +20,12 @@
 
         // Edited Code
 
-        function createMessage(message) {
-            vm.message = "";
-            var obj = {
-                message: message
-            };
-            $http.post("../test/", obj)
-                .then(
-                    findAllMessages,
-                    function(err) {
-                        vm.error = err;
-                    }
-                );
-        }
-
-        function deleteMessage(message) {
-            $http.delete("../test/" + message._id)
-                .then(
-                    findAllMessages,
-                    function(err) {
-                        vm.error = err;
-                    }
-                );
-        }
-
-        function findAllMessages() {
-            $http.get("../test/")
-                .then(
-                    function(response) {
-                        vm.messages = response.data;
-                    },
-                    function(err) {
-                        vm.error = err;
-                    }
-                );
-        }
-
         // function createMessage(message) {
         //     vm.message = "";
         //     var obj = {
         //         message: message
         //     };
-        //     $http.post("/api/test", obj)
+        //     $http.post("../test/", obj)
         //         .then(
         //             findAllMessages,
         //             function(err) {
@@ -71,7 +35,7 @@
         // }
         //
         // function deleteMessage(message) {
-        //     $http.delete("/api/test/" + message._id)
+        //     $http.delete("../test/" + message._id)
         //         .then(
         //             findAllMessages,
         //             function(err) {
@@ -81,7 +45,7 @@
         // }
         //
         // function findAllMessages() {
-        //     $http.get("/api/test")
+        //     $http.get("../test/")
         //         .then(
         //             function(response) {
         //                 vm.messages = response.data;
@@ -91,5 +55,41 @@
         //             }
         //         );
         // }
+
+        function createMessage(message) {
+            vm.message = "";
+            var obj = {
+                message: message
+            };
+            $http.post("/api/test", obj)
+                .then(
+                    findAllMessages,
+                    function(err) {
+                        vm.error = err;
+                    }
+                );
+        }
+
+        function deleteMessage(message) {
+            $http.delete("/api/test/" + message._id)
+                .then(
+                    findAllMessages,
+                    function(err) {
+                        vm.error = err;
+                    }
+                );
+        }
+
+        function findAllMessages() {
+            $http.get("/api/test")
+                .then(
+                    function(response) {
+                        vm.messages = response.data;
+                    },
+                    function(err) {
+                        vm.error = err;
+                    }
+                );
+        }
     }
 })();
