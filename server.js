@@ -37,7 +37,7 @@ require('./utilities/filelist');
 
 app.use(app.express.static(__dirname + '/public'));
 
-// require("./test/app.js");
+require("./test/app.js");
 
 var blog = require('./lectures/graduate/blog/app');
 blog(app);
