@@ -1,10 +1,8 @@
-module.exports = function(app)
-{
-
+// module.exports = function(app)
+// {
     //Custom Code starts
 
-    // var mongodb = require('mongodb');
-    //
+    var mongodb = require('mongodb');
     // var MongoClient = mongodb.MongoClient;
     //
     // var url = 'mongodb://admin:admin@ds119820.mlab.com:19820/heroku_hskk3b79';
@@ -54,8 +52,9 @@ module.exports = function(app)
     	connectionString = 'mongodb://' + username + ':' + password;
     	connectionString += '@ds119820.mlab.com:19820/heroku_hskk3b79'; // user yours
     }
-//
-//
+
+    console.log(connectionString);
+    process.exit();
     var mongoose = require("mongoose");
     mongoose.connect(connectionString);
 
@@ -103,4 +102,4 @@ module.exports = function(app)
                 }
             );
     }
-};
+// };
