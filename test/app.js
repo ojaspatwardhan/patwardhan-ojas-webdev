@@ -53,6 +53,7 @@
     	connectionString += '@ds119820.mlab.com:19820/heroku_hskk3b79'; // user yours
     }
 
+    console.log("Connection string is");
     console.log(connectionString);
     process.exit();
     var mongoose = require("mongoose");
