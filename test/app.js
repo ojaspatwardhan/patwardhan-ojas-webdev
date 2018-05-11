@@ -57,7 +57,7 @@ module.exports = function(app)
     console.log(connectionString);
 
     var mongoose = require("mongoose");
-    mongoose.connect(connectionString);
+    mongoose.connect(process.env.MONGO_URI);
 
     var TestSchema = mongoose.Schema({
         message: String
