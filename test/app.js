@@ -1,5 +1,5 @@
-// module.exports = function(app)
-// {
+module.exports = function(app)
+{
     //Custom Code starts
 
     // var mongodb = require('mongodb');
@@ -112,4 +112,4 @@
                 }
             );
     }
-// };
+};
