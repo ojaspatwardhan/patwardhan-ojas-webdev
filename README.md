@@ -1,8 +1,3 @@
-# web-dev-template
-
-1. git clone https://github.com/jannunzi/web-dev-template.git
-1. cd web-dev-template
-1. npm install
-1. mongod
-1. node server.js
-1. browse to localhost:3000
+My name is Ojas Patwardhan, I am a graduate student at Northeastern University pursuing my Masters in Computer Science. I have done 2 web development related internships previously.
+The purpose of this repository is for web development.
+Heroku Link - https://webdev-summer-2018.herokuapp.com/
